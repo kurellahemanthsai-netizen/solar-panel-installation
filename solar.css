@@ -105,6 +105,10 @@ header{
     width: 50px;
     height: 50px;
 }
+.logo a{
+  text-decoration: none;
+  color: #003262;
+}
 
 nav{
   display:flex;
@@ -127,7 +131,7 @@ nav a{
 }
 nav a:hover{
     color: #f4b400;
-    text-decoration: underline;
+   
 }
 
 .btn-primary{
@@ -213,7 +217,7 @@ body.dark-mode .login{
 
 
 
-body.dark-mode .hero,
+
 body.dark-mode .services,
 body.dark-mode .why-us,
 body.dark-mode .contact{
@@ -228,12 +232,49 @@ body.dark-mode .testimonial-card{
   color:#ffffff;
 }
 
-.hero{
+/* .hero{
   padding:100px 0;
   background:whitesmoke;
+} */
+ .hero{
+  background-image:url(images/img-1.webp);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  color:#ffffff;
+  position:relative;
+
+  min-height:88vh;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
 }
 
+/* Overlay */
+
+.hero .overlay{
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.4);
+
+  z-index:1;
+}
+
+/* Content above overlay */
+
 .hero-content{
+  position:relative;
+  z-index:2;
+
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   align-items:center;
@@ -244,11 +285,13 @@ body.dark-mode .testimonial-card{
   font-size:58px;
   line-height:1.2;
   margin-bottom:20px;
+
+  color:#ffffff;
 }
 
 .hero-text p{
   margin-bottom:30px;
-  color:#6b7280;
+  color:#ffffff;
 }
 
 .hero-buttons{
@@ -520,7 +563,7 @@ textarea{
   font-size:16px;
 }
 
-/* BUTTON */
+
 
 .pricing-btn{
   display:inline-block;
@@ -542,7 +585,7 @@ textarea{
   color:#ffffff;
 }
 
-/* ACTIVE CARD */
+
 
 .active-card{
   background:#003262;
@@ -565,7 +608,7 @@ textarea{
   color:#003262;
 }
 
-/* TAG */
+
 
 .tag{
   position:absolute;
@@ -584,7 +627,7 @@ textarea{
   font-weight:600;
 }
 
-/* DARK MODE */
+
 
 body.dark-mode .pricing{
   background:#111827;
@@ -605,7 +648,7 @@ body.dark-mode .active-card{
   background:#003262;
 }
 
-/* MOBILE */
+
 
 @media(max-width:768px){
 
@@ -651,7 +694,12 @@ margin-top: 20px;
 .footer-logo{
   font-size:30px;
   font-weight:700;
-  margin-bottom:20px;
+  margin-bottom:10px;  
+}
+
+.footer-logo img{
+  width: 50px;
+  height: 50px;
 }
 
 .footer-logo span{
@@ -679,12 +727,35 @@ margin-top: 20px;
   color:#f4b400;
 }
 
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,0.1);
-  text-align:center;  
-  padding:25px 0;
-  color:#cbd5e1;
+.footer-legal{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+ 
 }
+.footer-legal li{
+  list-style: none;
+  color: black;
+ 
+}
+.footer-legal a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer-legal a:hover{
+  color: #f4b400;
+}
+ 
+.footer-bottom{
+  border-top:1px solid #222222;
+  padding-top:25px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+ 
 
 
 
