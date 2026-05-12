@@ -23,11 +23,21 @@
 
       <div class="logo">
       <img src="images/logo.png" alt="">
-        Solar<span>Tech</span>
+        Solar<span>Tech</span>        
       </div>
+      
+      
 
-      <nav>
-        <a href="#">Home</a>
+      <nav>  
+              
+       <div class="dropdown">
+    <a href="#home" class="drop-btn">Home ▾</a>
+ 
+    <div class="dropdown-content">
+    <a href="#home">Home 1</a>
+
+    </div>
+</div>
         <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Projects</a>
@@ -261,6 +271,121 @@
     </div>
 
   </section>
+
+  
+
+<section class="pricing">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Pricing Plans</h2>
+
+      <p>
+        Affordable solar solutions for homes and businesses.
+      </p>
+
+    </div>
+
+    <div class="pricing-grid">
+
+     
+
+      <div class="pricing-card">
+
+        <h3>Basic Plan</h3>
+
+        <div class="price">
+          ₹49,999
+        </div>
+
+        <p class="price-text">
+          Perfect for small homes
+        </p>
+
+        <ul>
+
+          <li>✔ 3kW Solar Panels</li>
+          <li>✔ Free Installation</li>
+          <li>✔ 10 Year Warranty</li>
+          <li>✔ Energy Monitoring</li>
+
+        </ul>
+
+        <a href="#" class="pricing-btn">
+          Choose Plan
+        </a>
+
+      </div>
+
+      
+
+      <div class="pricing-card active-card">
+
+        <div class="tag">
+          Most Popular
+        </div>
+
+        <h3>Standard Plan</h3>
+
+        <div class="price">
+          ₹89,999
+        </div>
+
+        <p class="price-text">
+          Best for medium homes
+        </p>
+
+        <ul>
+
+          <li>✔ 5kW Solar Panels</li>
+          <li>✔ Battery Backup</li>
+          <li>✔ 20 Year Warranty</li>
+          <li>✔ Smart Monitoring</li>
+
+        </ul>
+
+        <a href="#" class="pricing-btn">
+          Choose Plan
+        </a>
+
+      </div>
+
+      
+
+      <div class="pricing-card">
+
+        <h3>Premium Plan</h3>
+
+        <div class="price">
+          ₹1,49,999
+        </div>
+
+        <p class="price-text">
+          Ideal for large homes
+        </p>
+
+        <ul>
+
+          <li>✔ 10kW Solar Panels</li>
+          <li>✔ Full Battery Storage</li>
+          <li>✔ 25 Year Warranty</li>
+          <li>✔ 24/7 Support</li>
+
+        </ul>
+
+        <a href="#" class="pricing-btn">
+          Choose Plan
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
  
 
 <footer class="footer">
@@ -350,46 +475,11 @@
 </footer>
 
 
-<script>
+<script src="solar.js">
 
  
 
-  const themeToggle = document.getElementById("theme-toggle");
-
-  themeToggle.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-    
-
-    if(document.body.classList.contains("dark-mode")){
-      themeToggle.innerHTML = "☀️";
-    }
-    else{
-      themeToggle.innerHTML = "🌙";
-    }
-
-  });
-
-
- 
-
-  const rtlToggle = document.getElementById("rtl-toggle");
-
-  rtlToggle.addEventListener("click", () => {
-
-    if(document.body.getAttribute("dir") === "rtl"){
-
-      document.body.setAttribute("dir", "ltr");
-
-    }
-    else{
-
-      document.body.setAttribute("dir", "rtl");
-
-    }
-
-  });
+  
 
 </script>
 
