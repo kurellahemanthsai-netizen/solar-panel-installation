@@ -175,12 +175,14 @@ nav a:hover{
 }
 
 .icon-btn{
-  width:42px;
-  height:42px;
+  width:45px;
+  height:45px;
   border:none;
   border-radius:10px;
-  background:#f3f4f6;
+  background:#f1f5f9;
+  color: #003262;
   cursor:pointer;
+  font-size:16px;
   font-weight:600;
   transition:0.3s;
 }
@@ -198,10 +200,54 @@ body.dark-mode{
 }
 
 body.dark-mode header{
-  background:#003262;
+  background:#1f2937;
 }
 
+/* ================= DARK MODE NAVBAR FIX ================= */
+
 body.dark-mode nav a{
+  color:#ffffff;
+  transition:0.3s ease;
+}
+
+body.dark-mode nav a:hover,
+body.dark-mode .drop-btn:hover{
+  color:#f4b400;
+  transform:translateY(-2px);
+  }
+
+/* DROPDOWN */
+
+body.dark-mode .dropdown-content{
+  background:#1f2937;
+}
+
+body.dark-mode .dropdown-content a{
+  color:#ffffff;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+/* THEME + RTL BUTTONS */
+
+body.dark-mode .icon-btn{
+  background:#374151;
+  color:#ffffff;
+  transition:0.3s ease;
+}
+
+body.dark-mode .icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+  transform:translateY(-2px);
+ }
+
+/* LOGO */
+
+body.dark-mode .logo a{
   color:#ffffff;
 }
 

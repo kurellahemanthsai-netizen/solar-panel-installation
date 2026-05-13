@@ -177,6 +177,7 @@ nav a:hover{
   border:none;
   border-radius:10px;
   background:#f3f4f6;
+  color: #003262;
   cursor:pointer;
   font-weight:600;
   transition:0.3s;
@@ -195,11 +196,51 @@ body.dark-mode{
 }
 
 body.dark-mode header{
-  background:#003262;
+  background:#1f2937;
 }
+
+/* NAV LINKS */
 
 body.dark-mode nav a{
   color:#ffffff;
+  transition:0.3s ease;
+}
+
+/* NAV HOVER */
+
+body.dark-mode nav a:hover,
+body.dark-mode .drop-btn:hover{
+  color:#f4b400;
+  transform:translateY(-2px);
+  }
+
+/* DROPDOWN MENU */
+
+body.dark-mode .dropdown-content{
+  background:#111827;
+}
+
+body.dark-mode .dropdown-content a{
+  color:#ffffff;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+/* THEME + RTL BUTTONS */
+
+body.dark-mode .icon-btn{
+  background:#374151;
+  color:#ffffff;
+  transition:0.3s ease;
+}
+
+body.dark-mode .icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+  transform:translateY(-2px);
 }
 
 body.dark-mode .icon-btn{

@@ -1,0 +1,712 @@
+/* ================= GLOBAL ================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffffff;
+  color:#0f172a;
+  line-height:1.7;
+  transition:0.4s ease;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.dropdown{
+ position:relative;
+}
+ 
+.drop-btn{
+ display:flex;
+ align-items:center;
+ gap:5px;
+}
+ 
+.dropdown-content{
+ position:absolute;
+ top:38px;
+ left:0;
+ 
+ background:#fff;
+ min-width:180px;
+ 
+ border-radius:12px;
+ overflow:hidden;
+ 
+ box-shadow:0 10px 30px rgba(0,0,0,0.15);
+ 
+ opacity:0;
+ visibility:hidden;
+ transform:translateY(10px);
+ 
+ transition:0.3s ease;
+}
+ 
+.dropdown-content a{
+ display:block;
+ color:#003262;
+ padding:14px 18px;
+ font-size:15px;
+}
+ 
+.dropdown-content a:hover{
+ background:#f3f7f3;
+ padding-left:24px;
+}
+ 
+.dropdown:hover .dropdown-content{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:30px;
+  font-weight:700;
+  color:#003262;
+}
+
+.logo span{
+  color:#f4b400;
+}
+
+.logo img{
+  width:50px;
+  height:50px;
+}
+.logo a{
+  text-decoration: none;
+  color: #003262;
+}
+
+/* NAVIGATION */
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:#003262;
+  font-weight:500;  
+}
+
+nav a:hover{
+  color:#f4b400;
+}
+
+/* BUTTONS */
+
+.header-actions{
+  display:flex;
+  gap:12px;
+}
+
+.icon-btn{
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:10px;
+  background:#f1f5f9;
+  color: #003262;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+.login{
+    display:inline-block;
+    background:#f4b400;
+    color:#ffffff;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.login:hover{
+    transform:scale(1.1);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  background-image:url(images/img-abt.webp);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  color:#ffffff;
+  position:relative;
+
+  min-height:88vh;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+/* Overlay */
+
+.hero .overlay{
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.4);
+
+  z-index:1;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#ffffff;
+}
+
+.hero-content h1{
+  font-size:65px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:18px;
+}
+
+/* ================= STORY ================= */
+
+.story{
+  padding:100px 0;
+}
+
+.story-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:60px;
+  align-items:center;
+}
+
+.story-image img{
+  border-radius:20px;
+}
+
+.story-content h2{
+  font-size:45px;
+  color:#003262;
+  margin-bottom:20px;
+}
+
+.story-content p{
+  margin-bottom:20px;
+  color:#64748b;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:#f4b400;
+  color:#ffffff;
+  border-radius:10px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover{
+  color:#003262;
+}
+
+/* ================= MISSION ================= */
+
+.mission{
+  padding:100px 0;
+  background:#f8fafc;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:42px;
+  color:#003262;
+}
+
+.section-title p{
+  color:#64748b;
+}
+
+.mission-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.mission-card{
+  background:#ffffff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+}
+.mission-card:hover{
+  transform:translateY(-8px);
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+.mission-card h3{
+  margin-bottom:15px;
+  color:#003262;
+}
+
+/* ================= TEAM ================= */
+
+.team{
+  padding:100px 0;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
+
+.team-card{
+  background:#f8fafc;
+  border-radius:20px;
+  overflow:hidden;
+  text-align:center;
+}
+
+.team-card img{
+  height:500px;
+  object-fit:cover;
+}
+
+.team-card h3{
+  margin-top:20px;
+  color:#003262;
+}
+
+.team-card p{
+  padding-bottom:20px;
+  color:#64748b;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  padding:100px 0;
+  background:#0f172a;
+  color:#ffffff;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:50px;
+  margin-bottom:20px;
+}
+
+.cta p{
+  margin-bottom:30px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  background:#003262;
+  color:#ffffff;
+  padding:0px 0;
+   padding-top: 25px;
+}
+.footer-box img{
+  width: 50px;
+  height: 50px;
+}
+.footer-box a:hover{
+  color:#f4b400;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+.footer span{
+  color:#f4b400;
+}
+
+.footer-box a{
+  display:block;
+  color:#cbd5e1;
+  margin:10px 0;
+}
+.footer-legal{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+ 
+}
+.footer-legal li{
+  list-style: none;
+  color: black;
+ 
+}
+.footer-legal a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer-legal a:hover{
+  color: #f4b400;
+}
+ 
+.footer-bottom{
+  border-top:1px solid #222222;
+  padding-top:25px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+.social-icons{
+display: flex;
+justify-content: space-around;
+gap: 10px;
+margin-top: 20px;
+}
+ 
+.social-icons a{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--white);
+ 
+  transition:0.4s ease;
+ 
+}
+ 
+.social-icons a:hover{
+  background:var(--secondary);
+  color: #f4b400;
+  transform:translateY(-5px);
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode{
+  background:#111827;
+  color:#ffffff;
+  transition:0.4s ease;
+}
+
+/* HEADER */
+
+body.dark-mode header{
+  background:#1f2937;
+  box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* LOGO */
+
+body.dark-mode .logo{
+  color:#ffffff;
+}
+
+body.dark-mode .logo a{
+  color:#ffffff;
+}
+
+body.dark-mode .logo span{
+  color:#f4b400;
+}
+
+/* NAVIGATION */
+
+body.dark-mode nav a{
+  color:#ffffff;
+}
+
+body.dark-mode nav a:hover{
+  color:#f4b400;
+}
+
+/* DROPDOWN */
+
+body.dark-mode .dropdown-content{
+  background:#1f2937;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .dropdown-content a{
+  color:#ffffff;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+/* BUTTONS */
+
+body.dark-mode .icon-btn{
+  background:#374151;
+  color:#ffffff;
+}
+
+body.dark-mode .icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .login{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .login:hover{
+  transform:scale(1.1);
+}
+
+/* HERO */
+
+body.dark-mode .hero .overlay{
+  background:rgba(0,0,0,0.55);
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content p{
+  color:#ffffff;
+}
+
+/* STORY SECTION */
+
+body.dark-mode .story{
+  background:#111827;
+}
+
+body.dark-mode .story-content h2{
+  color:#ffffff;
+}
+
+body.dark-mode .story-content p{
+  color:#d1d5db;
+}
+
+body.dark-mode .story-image img{
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* BUTTON */
+
+body.dark-mode .btn{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .btn:hover{
+  background:#ffffff;
+  color:#003262;
+}
+
+/* MISSION SECTION */
+
+body.dark-mode .mission{
+  background:#0f172a;
+}
+
+body.dark-mode .section-title h2{
+  color:#ffffff;
+}
+
+body.dark-mode .section-title p{
+  color:#d1d5db;
+}
+
+body.dark-mode .mission-card{
+  background:#1f2937;
+  color:#ffffff;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .mission-card h3{
+  color:#ffffff;
+}
+
+body.dark-mode .mission-card p{
+  color:#d1d5db;
+}
+
+body.dark-mode .mission-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TEAM SECTION */
+
+body.dark-mode .team{
+  background:#111827;
+}
+
+body.dark-mode .team-card{
+  background:#1f2937;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .team-card h3{
+  color:#ffffff;
+}
+
+body.dark-mode .team-card p{
+  color:#d1d5db;
+}
+
+/* CTA SECTION */
+
+body.dark-mode .cta{
+  background:#020617;
+}
+
+body.dark-mode .cta h2{
+  color:#ffffff;
+}
+
+body.dark-mode .cta p{
+  color:#d1d5db;
+}
+
+/* FOOTER */
+
+body.dark-mode .footer{
+  background:#003262;
+}
+
+body.dark-mode .footer-box h3,
+body.dark-mode .footer-box h4{
+  color:#ffffff;
+}
+
+body.dark-mode .footer-box a{
+  color:#cbd5e1;
+}
+
+body.dark-mode .footer-box a:hover{
+  color:#f4b400;
+}
+
+body.dark-mode .footer-bottom{
+  border-top:1px solid #374151;
+  color:#d1d5db;
+}
+
+body.dark-mode .footer-legal a{
+  color:#d1d5db;
+}
+
+body.dark-mode .footer-legal a:hover{
+  color:#f4b400;
+}
+
+/* SCROLLBAR */
+
+body.dark-mode::-webkit-scrollbar{
+  width:10px;
+}
+
+body.dark-mode::-webkit-scrollbar-track{
+  background:#111827;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb{
+  background:#374151;
+  border-radius:10px;
+}
+
+body.dark-mode::-webkit-scrollbar-thumb:hover{
+  background:#f4b400;
+}
+
+/* RTL + DARK MODE SUPPORT */
+
+body.dark-mode.rtl{
+  direction:rtl;
+}
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .story-content h2,
+  .section-title h2,
+  .cta h2{
+    font-size:34px;
+  }
+
+}
