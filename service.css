@@ -251,6 +251,7 @@ nav a:hover{
   border-radius:20px;
   overflow:hidden;
   box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  text-align: center;
 }
 .service-box:hover{
     transform:translateY(-8px);
@@ -269,6 +270,22 @@ nav a:hover{
 .service-content h3{
   color:#003262;
   margin-bottom:15px;
+}
+.rm{
+  width: 100px;
+  height: 50px;
+  background-color: #f4b400;
+  color: white;
+ 
+  border-radius:8px;
+  font-weight:600;  
+  border: none;
+  text-align: center;
+  margin-top: 10px;
+
+}
+.rm:hover{
+  color: #003262;  
 }
 
 /* ================= PROCESS ================= */
@@ -538,7 +555,8 @@ gap: 10px;
  
 .footer-bottom{
   border-top:1px solid #222222;
-  padding-top:25px;
+  padding-left:100px ;
+  padding-right: 100px;
   color:white;
   display: flex;
   justify-content: space-between;
