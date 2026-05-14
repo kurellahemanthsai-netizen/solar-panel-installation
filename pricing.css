@@ -1,0 +1,834 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffffff;
+  color:#0f172a;
+  line-height:1.7;
+  transition:0.4s;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.dropdown{
+ position:relative;
+}
+ 
+.drop-btn{
+ display:flex;
+ align-items:center;
+ gap:5px;
+}
+ 
+.dropdown-content{
+ position:absolute;
+ top:38px;
+ left:0;
+ 
+ background:#fff;
+ min-width:180px;
+ 
+ border-radius:12px;
+ overflow:hidden;
+ 
+ box-shadow:0 10px 30px rgba(0,0,0,0.15);
+ 
+ opacity:0;
+ visibility:hidden;
+ transform:translateY(10px);
+ 
+ transition:0.3s ease;
+}
+ 
+.dropdown-content a{
+ display:block;
+ color:#003262;
+ padding:14px 18px;
+ font-size:15px;
+}
+ 
+.dropdown-content a:hover{
+ background:#f3f7f3;
+ padding-left:24px;
+}
+ 
+.dropdown:hover .dropdown-content{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+}
+
+/* LOGO */
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:30px;
+  font-weight:700;
+  color:#003262;
+}
+
+.logo span{
+  color:#f4b400;
+}
+
+.logo img{
+  width:50px;
+  height:50px;
+}
+.logo a{
+  text-decoration: none;
+  color: #003262;
+}
+
+/* NAVIGATION */
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  color:#003262;
+  font-weight:500;  
+}
+
+nav a:hover{
+  color:#f4b400;
+}
+
+/* BUTTONS */
+
+.header-actions{
+  display:flex;
+  gap:12px;
+}
+
+.icon-btn{
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:10px;
+  background:#f1f5f9;
+  color: #003262;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+.login{
+    display:inline-block;
+    background:#f4b400;
+    color:#ffffff;
+    padding:12px 24px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.login:hover{
+    transform:scale(1.1);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  background-image:url(images/img-abt.webp);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  color:#ffffff;
+  position:relative;
+
+  min-height:88vh;
+
+  display:flex;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+/* Overlay */
+
+.hero .overlay{
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.4);
+
+  z-index:1;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#ffffff;
+}
+
+.hero-content h1{
+  font-size:65px;
+  margin-bottom:20px;
+}
+
+/* ================= COMMON ================= */
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:45px;
+  margin-bottom:15px;
+  color:#003262;
+}
+
+.section-title p{
+  color:#64748b;
+}
+
+/* ================= FEATURE CARDS ================= */
+
+.pricing-features{
+  padding:100px 0;
+  background:#f8fafc;
+}
+
+.feature-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.feature-card{
+  background:#ffffff;
+  padding:40px 30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.feature-card:hover{
+  transform:translateY(-10px);
+}
+
+.feature-card img{
+  width:150px;
+  height:150px;
+  margin:auto;
+  margin-bottom:25px;
+}
+
+.feature-card h3{
+  margin-bottom:15px;
+  color:#003262;
+}
+
+/* ================= COMPARISON SECTION ================= */
+
+.pricing{
+  padding:100px 0;
+  background:white;
+}
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:35px;
+  margin-top:60px;
+}
+
+.pricing-card{
+  background:#ffffff;
+
+  padding:45px 35px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  position:relative;
+
+  border:1px solid #dbe4ee;
+
+  transition:0.4s ease;
+}
+
+.pricing-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.pricing-card h3{
+  font-size:30px;
+  margin-bottom:20px;
+  color:#003262;
+}
+
+.price{
+  font-size:48px;
+  font-weight:700;
+  color:#f4b400;
+  margin-bottom:10px;
+}
+
+.price-text{
+  color:#6b7280;
+  margin-bottom:30px;
+}
+
+.pricing-card ul{
+  list-style:none;
+  margin-bottom:35px;
+}
+
+.pricing-card ul li{
+  margin:15px 0;
+  color:#4b5563;
+  font-size:16px;
+}
+
+
+
+.pricing-btn{
+  display:inline-block;
+
+  padding:14px 30px;
+
+  border-radius:10px;
+
+  background:#003262;
+  color:#ffffff;
+
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.pricing-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+
+
+.active-card{
+  background:#003262;
+
+  transform:scale(1.05);
+}
+
+.active-card h3,
+.active-card ul li,
+.active-card .price-text{
+  color:#ffffff;
+}
+
+.active-card .pricing-btn{
+  background:#f4b400;
+}
+
+.active-card .pricing-btn:hover{
+  background:#ffffff;
+  color:#003262;
+}
+.tag{
+  position:absolute;
+
+  top:-15px;
+  right:20px;
+
+  background:#f4b400;
+  color:#ffffff;
+
+  padding:8px 18px;
+
+  border-radius:30px;
+
+  font-size:14px;
+  font-weight:600;
+}
+
+
+
+/* ================= BENEFITS ================= */
+
+.benefits-section{
+  padding:100px 0;
+  background:#f8fafc;
+}
+
+.benefit-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.benefit-box{
+  background:#ffffff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.benefit-box img{
+  width:150px;
+  height:150px;
+  margin:auto;
+  margin-bottom:25px;
+}
+
+.benefit-box h3{
+  margin-bottom:15px;
+  color:#003262;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonial-section{
+  padding:100px 0;
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.testimonial-card{
+  background:#ffffff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-card img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  margin:auto;
+  margin-bottom:20px;
+}
+
+.testimonial-card h3{
+  margin-top:20px;
+  color:#003262;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  background:#003262;
+  color:#ffffff;
+  padding-top:80px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+  padding-bottom:50px;
+}
+
+.footer-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:30px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.footer-logo img{
+  width:50px;
+  height:50px;
+}
+
+.footer-logo span{
+  color:#f4b400;
+}
+
+.footer-box h3{
+  margin-bottom:20px;
+}
+
+.footer-box a{
+  display:block;
+  color:#cbd5e1;
+  margin-bottom:12px;
+  transition:0.3s;
+}
+
+.footer-box a:hover{
+  color:#f4b400;
+}
+
+.footer-box p{
+  color:#cbd5e1;
+  margin-bottom:12px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.1);
+  text-align:center;
+  padding:25px 0;
+}
+.social-icons{
+display: flex;
+justify-content: space-around;
+gap: 10px;
+/* margin-top: 20px; */
+}
+ 
+.social-icons a{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--white);
+ 
+  transition:0.4s ease;
+ 
+}
+ 
+.social-icons a:hover{
+  background:var(--secondary);
+  color: #f4b400;
+  transform:translateY(-5px);
+}
+.footer-legal{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+ 
+}
+.footer-legal li{
+  list-style: none;
+  color: black;
+ 
+}
+.footer-legal a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer-legal a:hover{
+  color: #f4b400;
+}
+ 
+.footer-bottom{
+  border-top:1px solid #222222;
+  padding-left:100px ;
+  padding-right: 100px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ================= DARK MODE ================= */
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode{
+  background:#111827;
+  color:#ffffff;
+}
+
+/* Header */
+
+body.dark-mode header{
+  background:#1f2937;
+  box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Navbar */
+
+body.dark-mode .logo,
+body.dark-mode .logo a,
+body.dark-mode nav a,
+body.dark-mode .drop-btn{
+  color:#ffffff;
+}
+
+/* Navbar Hover */
+
+body.dark-mode nav a:hover,
+body.dark-mode .drop-btn:hover{
+  color:#f4b400;
+}
+
+/* Dropdown */
+
+body.dark-mode .dropdown-content{
+  background:#1f2937;
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .dropdown-content a{
+  color:#ffffff;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+  padding-left:24px;
+}
+
+/* Buttons */
+
+body.dark-mode .icon-btn{
+  background:#374151;
+  color:#ffffff;
+}
+
+body.dark-mode .icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .login{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .login:hover{
+  transform:scale(1.1);
+}
+
+/* Hero Overlay */
+
+body.dark-mode .hero .overlay{
+  background:rgba(0,0,0,0.6);
+}
+
+/* Common Titles */
+
+body.dark-mode .section-title h2,
+body.dark-mode .feature-card h3,
+body.dark-mode .benefit-box h3,
+body.dark-mode .testimonial-card h3,
+body.dark-mode .pricing-card h3{
+  color:#ffffff;
+}
+
+/* Common Text */
+
+body.dark-mode .section-title p,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .price-text{
+  color:#d1d5db;
+}
+
+/* Sections */
+
+body.dark-mode .pricing-features,
+body.dark-mode .benefits-section,
+body.dark-mode .testimonial-section,
+body.dark-mode .pricing{
+  background:#111827;
+}
+
+/* Cards */
+
+body.dark-mode .feature-card,
+body.dark-mode .benefit-box,
+body.dark-mode .testimonial-card,
+body.dark-mode .pricing-card{
+  background:#1f2937;
+  border:1px solid #374151;
+  box-shadow:none;
+}
+
+/* Card Hover */
+
+body.dark-mode .feature-card:hover,
+body.dark-mode .benefit-box:hover,
+body.dark-mode .testimonial-card:hover,
+body.dark-mode .pricing-card:hover{
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Pricing Card */
+
+body.dark-mode .pricing-card ul li{
+  color:#d1d5db;
+}
+
+/* Active Pricing Card */
+
+body.dark-mode .active-card{
+  background:#003262;
+}
+
+body.dark-mode .active-card h3,
+body.dark-mode .active-card ul li,
+body.dark-mode .active-card .price-text{
+  color:#ffffff;
+}
+
+/* Buttons */
+
+body.dark-mode .pricing-btn{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+body.dark-mode .pricing-btn:hover{
+  background:#ffffff;
+  color:#003262;
+}
+
+/* Footer */
+
+body.dark-mode .footer{
+  background:#1f2937;
+}
+
+body.dark-mode .footer-box a,
+body.dark-mode .footer-box p,
+body.dark-mode .footer-bottom{
+  color:#d1d5db;
+}
+
+body.dark-mode .footer-box a:hover,
+body.dark-mode .footer-legal a:hover{
+  color:#f4b400;
+}
+
+/* Social Icons */
+
+body.dark-mode .social-icons a{
+  background:#374151;
+  color:#ffffff;
+}
+
+body.dark-mode .social-icons a:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+/* ================= RTL MODE ================= */
+
+body.rtl{
+  direction:rtl;
+}
+
+body.rtl .navbar,
+body.rtl .feature-cards,
+body.rtl .pricing-grid,
+body.rtl .benefit-grid,
+body.rtl .testimonial-grid,
+body.rtl .footer-grid{
+  direction:rtl;
+}
+
+body.rtl .feature-card,
+body.rtl .pricing-card,
+body.rtl .benefit-box,
+body.rtl .testimonial-card,
+body.rtl .footer-box{
+  text-align:right;
+}
+
+/* ================= RTL MODE ================= */
+
+body.rtl{
+  direction:rtl;
+}
+
+body.rtl .navbar,
+body.rtl .feature-cards,
+body.rtl .comparison-cards,
+body.rtl .benefit-grid,
+body.rtl .testimonial-grid,
+body.rtl .footer-grid{
+  direction:rtl;
+}
+
+body.rtl .feature-card,
+body.rtl .compare-card,
+body.rtl .benefit-box,
+body.rtl .testimonial-card,
+body.rtl .footer-box{
+  text-align:right;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .section-title h2{
+    font-size:34px;
+  }
+
+}

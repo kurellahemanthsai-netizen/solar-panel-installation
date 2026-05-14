@@ -34,4 +34,3 @@ const themeToggle = document.getElementById("theme-toggle");
     }
 
   });
-  

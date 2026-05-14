@@ -420,6 +420,23 @@ body.dark-mode .testimonial-card{
   border-radius:20px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
   transition:0.4s;
+  text-align: center;
+}
+.rm{
+  width: 100px;
+  height: 45px;
+  background-color: #f4b400;
+  color: white;
+ 
+  border-radius:8px;
+  font-weight:600;  
+  border: none;
+  text-align: center;
+  margin-top: 10px;
+
+}
+.rm:hover{
+  color: #003262;  
 }
 
 .service-card:hover{

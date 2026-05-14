@@ -29,13 +29,61 @@ a{
 
 /* ================= HEADER ================= */
 
-.header{
+header{
   background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 2px 15px rgba(0,0,0,0.08);
 }
+.dropdown{
+ position:relative;
+}
+ 
+.drop-btn{
+ display:flex;
+ align-items:center;
+ gap:5px;
+}
+ 
+.dropdown-content{
+ position:absolute;
+ top:38px;
+ left:0;
+ 
+ background:#fff;
+ min-width:180px;
+ 
+ border-radius:12px;
+ overflow:hidden;
+ 
+ box-shadow:0 10px 30px rgba(0,0,0,0.15);
+ 
+ opacity:0;
+ visibility:hidden;
+ transform:translateY(10px);
+ 
+ transition:0.3s ease;
+}
+ 
+.dropdown-content a{
+ display:block;
+ color:#003262;
+ padding:14px 18px;
+ font-size:15px;
+}
+ 
+.dropdown-content a:hover{
+ background:#f3f7f3;
+ padding-left:24px;
+}
+ 
+.dropdown:hover .dropdown-content{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
+ 
 
 .navbar{
   display:flex;
@@ -45,21 +93,22 @@ a{
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:30px;
+  font-size:28px;
   font-weight:700;
-  color:#003262;
+  align-items: center;
+  display: flex;
 }
 
 .logo span{
   color:#f4b400;
 }
-
 .logo img{
-  width:50px;
-  height:50px;
+    width: 50px;
+    height: 50px;
+}
+.logo a{
+  text-decoration: none;
+  color: #003262;
 }
 
 nav{
@@ -70,46 +119,135 @@ nav{
 nav a{
   color:#003262;
   font-weight:500;
-  transition:0.3s;
 }
 
-nav a:hover,
-nav .active{
+
+
+.btn-primary,
+.btn-secondary{
+  padding:12px 24px;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s;
+}
+nav a:hover{
+    color: #f4b400;
+   
+}
+
+.btn-primary{
+  background:#f4b400;
+  color:#ffffff;
+}
+.login{
+    background:#f4b400;
+    color:#ffffff;
+    padding:12px 24px;
+     border-radius:8px;
+    font-weight:600;
+    
+}
+.login:hover{
+    transform: scale(1.1);
+}
+
+.btn-primary:hover{
+  background:#f4b400;  
+}
+
+.btn-secondary{
+  border:2px solid #f4b400;
   color:#f4b400;
 }
 
-.header-buttons{
+.btn-secondary:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+
+.header-icons{
   display:flex;
+  align-items:center;
   gap:12px;
 }
 
-.toggle-btn{
-  padding:10px 18px;
+.icon-btn{
+  width:42px;
+  height:42px;
   border:none;
-  border-radius:8px;
-  background:#f4b400;
-  color:#ffffff;
+  border-radius:10px;
+  background:#f3f4f6;
+  color: #003262;
   cursor:pointer;
   font-weight:600;
+  transition:0.3s;
+}
+
+.icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+
+
+body.dark-mode{
+  background:#111827;
+  color:#ffffff;
+}
+
+body.dark-mode header{
+  background:#1f2937;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-  height:75vh;
-  background:url(images/blog-banner.jpg);
+  min-height:88vh;
+  background:url(images/g4.jpeg);
   background-size:cover;
   background-position:center;
   position:relative;
   display:flex;
-  justify-content:center;
   align-items:center;
 }
 
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.6);
+  background:rgba(0,0,0,0.4);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  color:#ffffff;
+}
+
+.hero-content h1{
+  font-size:65px;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:18px;
+}
+
+/* ================= COMMON ================= */
+
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.section-title h2{
+  font-size:42px;
+  color:#003262;
+}
+
+.section-title p{
+  color:#64748b;
 }
 
 .hero-content{
@@ -214,7 +352,9 @@ nav .active{
   color:#cbd5e1;
   margin-bottom:12px;
 }
-
+.footer-box a:hover{
+  color: #f4b400;
+}
 .footer-box p{
   color:#cbd5e1;
   margin-bottom:12px;
@@ -225,6 +365,69 @@ nav .active{
   text-align:center;
   padding:25px 0;
 }
+.social-icons{
+display: flex;
+justify-content: space-around;
+gap: 10px;
+margin-top: 20px;
+}
+ 
+.social-icons a{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  /* background:rgba(255,255,255,0.08); */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  color:var(--white);
+ 
+  transition:0.4s ease;
+ 
+}
+ 
+.social-icons a:hover{
+  background:var(--secondary);
+  color: #f4b400;
+  transform:translateY(-5px);
+}
+.footer-legal{
+  display: flex;
+  justify-content: center;
+  /* padding: 10px; */
+  gap: 20px; 
+}
+ 
+.social-icons a:hover{
+  background:var(--secondary);
+  color: #f4b400;
+  transform:translateY(-5px);
+}
+.footer-legal li{
+  list-style: none;
+  color: black;
+ 
+}
+.footer-legal a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.footer-legal a:hover{
+  color: #f4b400;
+}
+ 
+.footer-bottom{
+  border-top:1px solid gray;
+  padding-left:100px ;
+  padding-right: 100px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ================= DARK MODE ================= */
 
 /* ================= DARK MODE ================= */
 
@@ -233,21 +436,92 @@ body.dark-mode{
   color:#ffffff;
 }
 
-body.dark-mode .header,
-body.dark-mode .footer,
+/* Main Sections */
+
+
 body.dark-mode .bg-light{
   background:#1f2937;
 }
+body.dark-mode .header,
+body.dark-mode .footer{
+  background: #1f2937;
+}
 
+/* Navbar / Logo / Buttons */
+
+body.dark-mode .logo,
+body.dark-mode .logo a,
 body.dark-mode nav a,
-body.dark-mode .blog-content h2,
-body.dark-mode .logo{
+body.dark-mode .drop-btn,
+body.dark-mode .icon-btn{
+  color:#ffffff;
+}
+
+/* Blog Content */
+
+body.dark-mode .blog-content h2{
   color:#ffffff;
 }
 
 body.dark-mode .blog-content p,
 body.dark-mode .blog-content ul li{
   color:#d1d5db;
+}
+
+/* Dropdown Menu */
+
+body.dark-mode .dropdown-content{
+  background:#1f2937;
+}
+
+body.dark-mode .dropdown-content a{
+  color:#ffffff;
+}
+
+/* Hover Effects */
+
+body.dark-mode nav a:hover,
+body.dark-mode .dropdown-content a:hover{
+  color:#f4b400;
+}
+
+.dropdown-content a:hover{
+  background:#f3f7f3;
+  color:#003262;
+  padding-left:24px;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+/* Icon Buttons */
+
+body.dark-mode .icon-btn{
+  background:#374151;
+}
+
+body.dark-mode .icon-btn:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+
+/* Extra Hover Effects */
+
+body.dark-mode .blog-btn:hover,
+body.dark-mode .newsletter-form button:hover,
+body.dark-mode .featured-content span:hover{
+  color:#111827;
+}
+
+body.dark-mode .footer-legal a:hover,
+body.dark-mode .footer-box a:hover{
+  color:#f4b400;
+}
+
+body.dark-mode .login:hover{
+  transform:scale(1.1);
 }
 
 /* ================= RTL MODE ================= */
