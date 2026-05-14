@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SolarTech</title>
-
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="blogs.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="dashboard.css">
 
 </head>
 
@@ -72,213 +70,232 @@
 
   </header>
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
+<!-- ================= DASHBOARD ================= -->
 
-  <div class="overlay"></div>
+<div class="dashboard-container">
 
-  <div class="container hero-content">
+  <!-- ================= SIDEBAR ================= -->
 
-    <h1>Latest Solar Energy Blogs</h1>
+  <aside class="sidebar">
 
-    <p>
-      Explore modern renewable energy ideas, technologies, and innovations.
-    </p>
+    <ul>
 
-  </div>
+      <li class="active">Dashboard</li>
+      <li>Analytics</li>
+      <li>Projects</li>
+      <li>Energy Usage</li>
+      <li>Reports</li>
+      <li>Customers</li>
+      <li>Settings</li>
 
-</section>
+    </ul>
 
-<!-- ================= FEATURED BLOG ================= -->
+  </aside>
 
-<section class="featured-blog">
+  <!-- ================= MAIN CONTENT ================= -->
 
-  <div class="container featured-grid">
+  <main class="main-content">
 
-    <div class="featured-image">
+    <!-- ================= TOPBAR ================= -->
 
-      <img src="images/feature-article.webp" alt="">
+    <div class="topbar">
 
-    </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search here...">
+      </div>
 
-    <div class="featured-content">
-
-      <span>Featured Article</span>
-
-      <h2>
-        Why Solar Energy Is The Future Of Smart Homes
-      </h2>
-
-      <p>
-        Discover how solar technology is transforming modern homes with clean and renewable energy solutions.
-      </p>
-
-      <a href="#" class="blog-btn" onclick="document.location='blog1.html'">
-        Read More
-      </a>
+      <img src="images/founder.jpg" alt="" class="profile">
 
     </div>
 
-  </div>
+    <!-- ================= HERO ================= -->
 
-</section>
+    <section class="hero">
 
-<!-- ================= LATEST ARTICLES ================= -->
+      <div class="hero-text">
 
-<section class="latest-articles">
+        <h1>Welcome Back Admin</h1>
 
-  <div class="container">
+        <p>
+          Monitor renewable energy production and smart solar analytics.
+        </p>
 
-    <div class="section-title">
+        <button>
+          Explore Dashboard
+        </button>
 
-      <h2>Latest Articles</h2>
+      </div>
 
-      <p>
-        Stay updated with modern solar technologies and energy trends.
-      </p>
+      <div class="hero-image">
 
-    </div>
+        <img src="images/s1.jpg" alt="">
 
-    <div class="articles-grid">
+      </div>
 
-      <div class="article-box">
+    </section>
 
-        <img src="images/a-1.jpeg" alt="">
+    <!-- ================= STATS ================= -->
 
-        <div class="article-content">
+    <section class="stats-grid">
 
-          <h3>
-            Top Benefits Of Rooftop Solar Panels
-          </h3>
+      <div class="stat-card">
 
-          <p>
-            Learn how rooftop solar systems help reduce electricity bills.
-          </p>
-          <button class="rm" onclick="document.location='blog1.html'">Readmore</button>
+        <h2>12.5MW</h2>
+
+        <h3>Total Energy</h3>
+
+        <p>
+          Maximizing total energy generation with high-efficiency solar panels.
+        </p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2>8,450</h2>
+
+        <h3>Customers</h3>
+
+        <p>
+          Empowering customers with clean and reliable solar solutions.
+        </p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2>95%</h2>
+
+        <h3>Efficiency Rate</h3>
+
+        <p>
+          High-efficiency systems that reduce energy costs.
+        </p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2>1,240</h2>
+
+        <h3>Projects</h3>
+
+        <p>
+          Sustainable solar energy projects for homes and businesses.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================= ANALYTICS ================= -->
+
+    <section class="analytics-section">
+
+      <div class="analytics-card large-card">
+
+        <h2>Energy Analytics</h2>
+
+        <img src="images/enalitics.jpeg" alt="">
+
+      </div>
+
+      <div class="analytics-card">
+
+        <h2>Battery Status</h2>
+
+        <div class="progress-box">
+
+          <div class="progress-bar"></div>
+
+        </div>
+
+        <p>82% Battery Backup Available</p>
+
+      </div>
+
+      <div class="analytics-card">
+
+        <h2>Solar Performance</h2>
+
+        <div class="circle">
+          92%
+        </div>
+
+        <p>System Performance</p>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects-section">
+
+      <div class="section-title">
+
+        <h2>Recent Projects</h2>
+
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+
+          <img src="images/residential.jpeg" alt="">
+
+          <div class="project-content">
+
+            <h3>Residential Solar</h3>
+
+            <p>
+              Smart rooftop installation for modern homes.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <img src="images/commercial.jpeg" alt="">
+
+          <div class="project-content">
+
+            <h3>Commercial Energy</h3>
+
+            <p>
+              Renewable energy systems for businesses.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="project-card">
+
+          <img src="images/storage.jpeg" alt="">
+
+          <div class="project-content">
+
+            <h3>Battery Storage</h3>
+
+            <p>
+              Smart energy storage solutions for industries.
+            </p>
+
+          </div>
 
         </div>
 
       </div>
 
-      <div class="article-box">
+    </section>
 
-        <img src="images/a-2.jpeg" alt="">
+  </main>
 
-        <div class="article-content">
-
-          <h3>
-            Smart Battery Storage Solutions
-          </h3>
-
-          <p>
-            Explore modern battery backup technologies for homes.
-          </p>
-          <button class="rm" onclick="document.location='blog1.html'">Readmore</button>
-
-        </div>
-
-      </div>
-
-      <div class="article-box">
-
-        <img src="images/a-3.jpeg" alt="">
-
-        <div class="article-content">
-
-          <h3>
-            Solar Energy For Commercial Buildings
-          </h3>
-
-          <p>
-            Efficient renewable energy systems for industries and offices.
-          </p>
-          <button class="rm" onclick="document.location='blog1.html'">Readmore</button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= TRENDING BLOGS ================= -->
-
-<section class="trending">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <h2>Trending Blogs</h2>
-
-      <p>
-        Most popular renewable energy articles this month.
-      </p>
-
-    </div>
-
-    <div class="trending-grid">
-
-      <div class="trending-box">
-
-        <img src="images/t-1.jpeg" alt="">
-
-        <h3>
-          Smart Cities Using Solar Energy
-        </h3>
-        <button class="rm" onclick="document.location='blog1.html'">Readmore</button>
-
-      </div>
-
-      <div class="trending-box">
-
-        <img src="images/t-2.jpeg" alt="">
-
-        <h3>
-          Future Of Renewable Energy Systems
-        </h3>
-        <button class="rm" onclick="document.location='blog1.html'">Readmore</button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ================= NEWSLETTER ================= -->
-
-<section class="newsletter">
-
-  <div class="container newsletter-content">
-
-    <h2>
-      Subscribe To Our Blog
-    </h2>
-
-    <p>
-      Get the latest renewable energy articles directly to your inbox.
-    </p>
-
-    <form class="newsletter-form">
-
-      <input type="email" placeholder="Enter Your Email">
-
-      <button type="submit">
-        Subscribe
-      </button>
-
-    </form>
-
-  </div>
-
-</section>
+</div>
 
 <!-- ================= FOOTER ================= -->
 
@@ -376,8 +393,9 @@
 
 </footer>
 
-<script src="blogs.js"></script>
+<!-- ================= SCRIPT ================= -->
+
+<script src="dashboard.js"></script>
 
 </body>
-
 </html>
