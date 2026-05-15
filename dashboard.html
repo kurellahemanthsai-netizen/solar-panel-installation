@@ -1,262 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SolarTech</title>
+
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 
   <!-- GOOGLE FONT -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <!-- CSS -->
+
   <link rel="stylesheet" href="dashboard.css">
 
 </head>
 
 <body>
 
+  <!-- ================= DASHBOARD ================= -->
 
+  <div class="dashboard-container">
 
+    <!-- ================= SIDEBAR ================= -->
 
-<!-- ================= DASHBOARD ================= -->
+    <aside class="sidebar">
 
-<div class="dashboard-container">
-
-  <!-- ================= SIDEBAR ================= -->
-
-  <aside class="sidebar">
-
-    <ul>
       <div class="logo">
-      <!-- <img src="images/logo.png" alt=""> -->
-        <a href="index.html"> <span class="bl">Solar</span>
-          <span class="yl">Tech</span>  </a>      
-      </div>
 
-      <li class="active">Dashboard</li>
-      <li>Analytics</li>
-      <li>Projects</li>
-      <li>Energy Usage</li>
-      <li>Reports</li>
-      <li>Customers</li>
-      <li>Settings</li>
+        <a href="index.html">
 
-    </ul>
+          <span class="bl">Solar</span>
+          <span class="yl">Tech</span>
 
-  </aside>
-
-  <!-- ================= MAIN CONTENT ================= -->
-
-  <main class="main-content">
-
-    <!-- ================= TOPBAR ================= -->
-
-    <div class="topbar">
-
-      <div class="search-box">
-        <input type="text" placeholder="Search here...">
-      </div>
-
-      <img src="images/founder.jpg" alt="" class="profile">
-
-    </div>
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
-      <div class="hero-text">
-
-        <h1>Welcome Back Admin</h1>
-
-        <p>
-          Monitor renewable energy production and smart solar analytics.
-        </p>
-
-        <button>
-          Explore Dashboard
-        </button>
+        </a>
 
       </div>
 
-      <div class="hero-image">
+      <ul>
 
-        <img src="images/s1.jpg" alt="">
+        <li class="active">Dashboard</li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="energy-usage.html">Energy Usage</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="customers.html">Customers</a></li>
+        <li><a href="">Settings</a></li>
+        <li><a href="">Logout</a></li>
 
-      </div>
+      </ul>
 
-    </section>
+    </aside>
 
-    <!-- ================= STATS ================= -->
+    <!-- ================= MAIN CONTENT ================= -->
 
-    <section class="stats-grid">
+    <main class="main-content">
 
-      <div class="stat-card">
+      <!-- ================= TOPBAR ================= -->
 
-        <h2>12.5MW</h2>
+      <div class="topbar">
+        <img src="images/founder.jpg" alt="Profile" class="profile">
 
-        <h3>Total Energy</h3>
+        <div class="search-box">
 
-        <p>
-          Maximizing total energy generation with high-efficiency solar panels.
-        </p>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h2>8,450</h2>
-
-        <h3>Customers</h3>
-
-        <p>
-          Empowering customers with clean and reliable solar solutions.
-        </p>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h2>95%</h2>
-
-        <h3>Efficiency Rate</h3>
-
-        <p>
-          High-efficiency systems that reduce energy costs.
-        </p>
-
-      </div>
-
-      <div class="stat-card">
-
-        <h2>1,240</h2>
-
-        <h3>Projects</h3>
-
-        <p>
-          Sustainable solar energy projects for homes and businesses.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- ================= ANALYTICS ================= -->
-
-    <section class="analytics-section">
-
-      <div class="analytics-card large-card">
-
-        <h2>Energy Analytics</h2>
-
-        <img src="images/enalitics.jpeg" alt="">
-
-      </div>
-
-      <div class="analytics-card">
-
-        <h2>Battery Status</h2>
-
-        <div class="progress-box">
-
-          <div class="progress-bar"></div>
+          <input type="text" placeholder="Search here...">
 
         </div>
 
-        <p>82% Battery Backup Available</p>
+        <div class="topbar-right">
 
-      </div>
+          <div class="top-buttons">
 
-      <div class="analytics-card">
+            <!-- THEME BUTTON -->
 
-        <h2>Solar Performance</h2>
+            <button class="toggle-btn" id="themeToggle">
 
-        <div class="circle">
-          92%
+              <i class="fa-solid fa-moon"></i>
+
+              <span class="btn-text"></span>
+
+            </button>
+
+            <!-- RTL BUTTON -->
+
+            <button class="toggle-btn rtl-btn" id="rtlToggle">
+
+              RTL
+
+            </button>
+            <button class="bell"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+</svg>
+</button>
+
+          </div>
+
+          <!-- PROFILE IMAGE -->
+           
+
+          <!-- <img src="images/founder.jpg" alt="Profile" class="profile"> -->
+
         </div>
 
-        <p>System Performance</p>
-
       </div>
 
-    </section>
+      <!-- ================= HERO ================= -->
 
-    <!-- ================= PROJECTS ================= -->
+      <section class="hero">
 
-    <section class="projects-section">
+        <div class="hero-text">
 
-      <div class="section-title">
+          <h1>Welcome Back Admin</h1>
 
-        <h2>Recent Projects</h2>
+          <p>
+            Monitor renewable energy production and smart solar analytics.
+          </p>
 
-      </div>
+          <button>
+            Explore Dashboard
+          </button>
 
-      <div class="projects-grid">
+        </div>
 
-        <div class="project-card">
+        <div class="hero-image">
 
-          <img src="images/residential.jpeg" alt="">
+          <img src="images/s1.jpg" alt="">
 
-          <div class="project-content">
+        </div>
 
-            <h3>Residential Solar</h3>
+      </section>
 
-            <p>
-              Smart rooftop installation for modern homes.
-            </p>
+      <!-- ================= STATS ================= -->
+
+      <section class="stats-grid">
+
+        <div class="stat-card">
+
+          <h2>12.5MW</h2>
+
+          <h3>Total Energy</h3>
+
+          <p>
+            Maximizing total energy generation with high-efficiency solar panels.
+          </p>
+
+        </div>
+
+        <div class="stat-card">
+
+          <h2>8,450</h2>
+
+          <h3>Customers</h3>
+
+          <p>
+            Empowering customers with clean and reliable solar solutions.
+          </p>
+
+        </div>
+
+        <div class="stat-card">
+
+          <h2>95%</h2>
+
+          <h3>Efficiency Rate</h3>
+
+          <p>
+            High-efficiency systems that reduce energy costs.
+          </p>
+
+        </div>
+
+        <div class="stat-card">
+
+          <h2>1,240</h2>
+
+          <h3>Projects</h3>
+
+          <p>
+            Sustainable solar energy projects for homes and businesses.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- ================= ANALYTICS ================= -->
+
+      <section class="analytics-section">
+
+        <div class="analytics-card large-card">
+
+          <h2>Energy Analytics</h2>
+
+          <img src="images/enalitics.jpeg" alt="">
+
+        </div>
+
+        <div class="analytics-card">
+
+          <h2>Battery Status</h2>
+
+          <div class="progress-box">
+
+            <div class="progress-bar"></div>
+
+          </div>
+
+          <p>82% Battery Backup Available</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+          <h2>Solar Performance</h2>
+
+          <div class="circle">
+
+            92%
+
+          </div>
+
+          <p>System Performance</p>
+
+        </div>
+
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+
+      <section class="projects-section">
+
+        <div class="section-title">
+
+          <h2>Recent Projects</h2>
+
+        </div>
+
+        <div class="projects-grid">
+
+          <div class="project-card">
+
+            <img src="images/residential.jpeg" alt="">
+
+            <div class="project-content">
+
+              <h3>Residential Solar</h3>
+
+              <p>
+                Smart rooftop installation for modern homes.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="project-card">
+
+            <img src="images/commercial.jpeg" alt="">
+
+            <div class="project-content">
+
+              <h3>Commercial Energy</h3>
+
+              <p>
+                Renewable energy systems for businesses.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="project-card">
+
+            <img src="images/storage.jpeg" alt="">
+
+            <div class="project-content">
+
+              <h3>Battery Storage</h3>
+
+              <p>
+                Smart energy storage solutions for industries.
+              </p>
+
+            </div>
 
           </div>
 
         </div>
 
-        <div class="project-card">
+      </section>
 
-          <img src="images/commercial.jpeg" alt="">
+    </main>
 
-          <div class="project-content">
+  </div>
 
-            <h3>Commercial Energy</h3>
+  <!-- ================= SCRIPT ================= -->
 
-            <p>
-              Renewable energy systems for businesses.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="project-card">
-
-          <img src="images/storage.jpeg" alt="">
-
-          <div class="project-content">
-
-            <h3>Battery Storage</h3>
-
-            <p>
-              Smart energy storage solutions for industries.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-</div>
-
-
-<!-- ================= SCRIPT ================= -->
-
-<script src="dashboard.js"></script>
+  <script src="dashboard.js">  </script>
 
 </body>
+
 </html>

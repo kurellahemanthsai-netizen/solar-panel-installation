@@ -1,18 +1,24 @@
+<!-- ======================= analytics.html ======================= -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SolarTech</title>
+  <title>SolarTech Dashboard</title>
+
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <!-- GOOGLE FONT -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
 
   <link rel="stylesheet" href="analytics.css">
 
@@ -23,53 +29,64 @@
 <!-- ================= HEADER ================= -->
 
 <header>
-    <div class="container navbar">
 
-      <div class="logo">
-      <img src="images/logo.png" alt="">
-        <a href="index.html">Solar<span>Tech</span>  </a>      
+  <div class="container navbar">
+
+    <div class="logo">
+
+      <img src="images/logo.png" alt="Logo">
+
+      <a href="index.html">
+        Solar<span>Tech</span>
+      </a>
+
+    </div>
+
+    <nav>
+
+      <div class="dropdown">
+
+        <a href="#" class="drop-btn">
+          Home ▾
+        </a>
+
+        <div class="dropdown-content">
+
+          <a href="index.html">Home 1</a>
+          <a href="home2.html">Home 2</a>
+
+        </div>
+
       </div>
-     
-      
 
-      <nav>  
-              
-       <div class="dropdown">
-    <a href="#home" class="drop-btn">Home ▾</a>
- 
-    <div class="dropdown-content">
-    <a href="index.html">Home 1</a>
-    <a href="home2.html">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
 
-    </div>
-</div>
-        <a href="about.html">About</a>
-        <a href="service.html">Services</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="dashboard.html">Dashboard</a>
-      </nav>
+    </nav>
 
-      
-      <div class="header-icons">
+    <div class="header-icons">
 
-  
-  <button id="rtl-toggle" class="icon-btn">
-    RTL
-  </button>
+      <button id="rtl-toggle" class="icon-btn">
+        RTL
+      </button>
 
-  
-  <button id="theme-toggle" class="icon-btn">
-    🌙
-  </button>
-  <a href="#" class="login" onclick="document.location='login.html'">Login</a>
+      <button id="theme-toggle" class="icon-btn">
+        🌙
+      </button>
 
-</div>
+      <a href="login.html" class="login">
+        Login
+      </a>
 
     </div>
 
-  </header>
+  </div>
+
+</header>
 
 <!-- ================= HERO ================= -->
 
@@ -137,35 +154,79 @@
 
   <div class="container analytics-grid">
 
+    <!-- CARD 1 -->
+
     <div class="analytics-card">
 
-      <h3>Daily Energy Usage</h3>
+      <h3>Weekly Energy Production</h3>
 
       <div class="bars">
 
-        <div class="bar">
-          <span style="height:70%;"></span>
+        <div class="bar-item">
+
+          <div class="bar">
+            <span style="height:70%;"></span>
+          </div>
+
+          <h4>18kW</h4>
+
+          <p>Mon</p>
+
         </div>
 
-        <div class="bar">
-          <span style="height:85%;"></span>
+        <div class="bar-item">
+
+          <div class="bar">
+            <span style="height:85%;"></span>
+          </div>
+
+          <h4>22kW</h4>
+
+          <p>Tue</p>
+
         </div>
 
-        <div class="bar">
-          <span style="height:60%;"></span>
+        <div class="bar-item">
+
+          <div class="bar">
+            <span style="height:60%;"></span>
+          </div>
+
+          <h4>15kW</h4>
+
+          <p>Wed</p>
+
         </div>
 
-        <div class="bar">
-          <span style="height:95%;"></span>
+        <div class="bar-item">
+
+          <div class="bar">
+            <span style="height:95%;"></span>
+          </div>
+
+          <h4>25kW</h4>
+
+          <p>Thu</p>
+
         </div>
 
-        <div class="bar">
-          <span style="height:75%;"></span>
+        <div class="bar-item">
+
+          <div class="bar">
+            <span style="height:75%;"></span>
+          </div>
+
+          <h4>20kW</h4>
+
+          <p>Fri</p>
+
         </div>
 
       </div>
 
     </div>
+
+    <!-- CARD 2 -->
 
     <div class="analytics-card">
 
@@ -251,49 +312,83 @@
 
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="footer">
 
-  <div class="container footer-container">
+  <div class="container footer-grid">
 
-    <div>
+    <div class="footer-box">
 
       <div class="footer-logo">
+
+        <img src="images/logo.png" alt="">
+
         Solar<span>Tech</span>
+
       </div>
 
       <p>
-        Premium renewable energy solutions for modern smart homes.
+        Modern solar solutions for sustainable homes and businesses.
       </p>
 
     </div>
 
-    <div>
+    <div class="footer-box">
 
       <h3>Quick Links</h3>
 
       <a href="#">Home</a>
+      <a href="#">About</a>
       <a href="#">Services</a>
-      <a href="#">Pricing</a>
+      <a href="#">Blogs</a>
       <a href="#">Contact</a>
 
     </div>
 
-    <div>
+    <div class="footer-box">
+
+      <h3>Services</h3>
+
+      <a href="#">Residential Solar</a>
+      <a href="#">Commercial Solar</a>
+      <a href="#">Battery Storage</a>
+      <a href="#">Energy Monitoring</a>
+
+    </div>
+
+    <div class="footer-box">
 
       <h3>Contact</h3>
 
       <p>Email: info@solartech.com</p>
+
       <p>Phone: +91 98765 43210</p>
+
+      <p>Location: Hyderabad, India</p>
 
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 SolarTech. All Rights Reserved.
+
+    <p>© 2026 SolarTech. All Rights Reserved.</p>
+
+    <div class="footer-legal">
+
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+
+    </div>
+
   </div>
 
 </footer>
 
+<!-- JS -->
+
+<script src="analytics.js"></script>
+
 </body>
+
 </html>

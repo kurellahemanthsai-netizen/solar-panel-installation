@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SolarTech</title>
+
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="forgot.css">
+
+</head>
+
+<body>
+
+<!-- ================= FORGOT PASSWORD ================= -->
+
+<section class="forgot-section">
+
+  <div class="forgot-container">
+
+    <!-- THEME + RTL BUTTONS -->
+
+    <div class="theme-wrapper">
+
+      <!-- THEME BUTTON -->
+
+      <button class="theme-toggle" id="themeToggle">
+
+        <i class="fa-solid fa-moon"></i>
+
+        <span></span>
+
+      </button>
+
+      <!-- RTL BUTTON -->
+
+      <button class="rtl-toggle" id="rtlToggle">
+
+        RTL
+
+      </button>
+
+    </div>
+
+    <!-- LOGO -->
+
+    <div class="logo" onclick="document.location='index.html'">
+
+      <span class="bl">Solar</span>
+      <span class="yl">Tech</span>
+
+    </div>
+
+    <!-- TITLE -->
+
+    <h2>Forgot Password?</h2>
+
+    <p class="subtitle">
+
+      Enter your registered email address and we'll send you a password reset link.
+
+    </p>
+
+    <!-- FORM -->
+
+    <form id="forgotForm">
+
+      <div class="input-box">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <input type="email"
+          placeholder="Enter your email address"
+          required>
+
+      </div>
+
+      <button type="submit" class="reset-btn">
+
+        Send Reset Link
+
+      </button>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+
+    <div class="success-message" id="successMessage">
+
+      Password reset link sent successfully.
+
+    </div>
+
+    <!-- BACK LOGIN -->
+
+    <div class="back-login">
+
+      <a href="login.html">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Login
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="forget.js"></script>
+
+</body>
+
+</html>

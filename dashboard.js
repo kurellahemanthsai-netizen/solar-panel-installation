@@ -1,36 +1,33 @@
-const themeToggle = document.getElementById("theme-toggle");
+// ================= DARK MODE =================
 
-  themeToggle.addEventListener("click", () => {
+    const themeToggle = document.getElementById("themeToggle");
 
-    document.body.classList.toggle("dark-mode");
+    themeToggle.addEventListener("click", () => {
 
-    
+      document.body.classList.toggle("dark-mode");
 
-    if(document.body.classList.contains("dark-mode")){
-      themeToggle.innerHTML = "☀️";
-    }
-    else{
-      themeToggle.innerHTML = "🌙";
-    }
+      const icon = themeToggle.querySelector("i");
 
-  });
+      if(document.body.classList.contains("dark-mode")){
 
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
 
- 
+      }else{
 
-  const rtlToggle = document.getElementById("rtl-toggle");
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
 
-  rtlToggle.addEventListener("click", () => {
+      }
 
-    if(document.body.getAttribute("dir") === "rtl"){
+    });
 
-      document.body.setAttribute("dir", "ltr");
+    // ================= RTL MODE =================
 
-    }
-    else{
+    const rtlToggle = document.getElementById("rtlToggle");
 
-      document.body.setAttribute("dir", "rtl");
+    rtlToggle.addEventListener("click", () => {
 
-    }
+      document.body.classList.toggle("rtl");
 
-  });
+    });

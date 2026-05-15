@@ -8,11 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SolarTech</title>
+
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <!-- GOOGLE FONT -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
 
   <link rel="stylesheet" href="login.css">
 
@@ -25,6 +35,30 @@
 <section class="login-section">
 
   <div class="login-box">
+
+    <!-- THEME + RTL BUTTONS -->
+
+    <div class="theme-wrapper">
+
+      <!-- THEME BUTTON -->
+
+      <button class="theme-toggle" id="themeToggle">
+
+        <i class="fa-solid fa-moon"></i>
+
+        <span></span>
+
+      </button>
+
+      <!-- RTL BUTTON -->
+
+      <button class="rtl-toggle" id="rtlToggle">
+
+        RTL
+
+      </button>
+
+    </div>
 
     <!-- LOGO -->
 
@@ -87,7 +121,7 @@
 
         </div>
 
-        <a href="#">Forgot Password?</a>
+        <a href="forgot.html">Forgot Password?</a>
 
       </div>
 
@@ -129,13 +163,17 @@
 
       Don't have an account?
 
-      <a href="#" onclick="document.location='signup.html'">Create Account</a>
+      <a href="signup.html">Create Account</a>
 
     </p>
 
   </div>
 
 </section>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="login.js"></script>
 
 </body>
 
