@@ -91,14 +91,15 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 0;
+  padding:16px 0;
 }
 
 .logo{
   font-size:28px;
   font-weight:700;
-  align-items: center;
-  display: flex;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .logo span{
@@ -115,12 +116,35 @@ header{
 
 nav{
   display:flex;
+  align-items:center;
   gap:30px;
 }
 
 nav a{
   color:#003262;
   font-weight:500;
+  display:flex;
+  align-items:center;
+  height:50px;
+}
+.hamburger{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+  color:#003262;
+  width:45px;
+  height:45px;
+  border-radius:10px;
+  align-items:center;
+  justify-content:center;
+}
+
+.hamburger:hover{
+  background:#f4b400;
+  color:#ffffff;
+}
+body.dark-mode .hamburger{
+  color:#ffffff;
 }
 
 
@@ -150,6 +174,7 @@ nav a:hover{
     
 }
 .login:hover{
+  color: #003262;
     transform: scale(1.1);
 }
 
@@ -288,7 +313,7 @@ body.dark-mode .testimonial-card{
 /* HERO */
 
 .hero{
-  min-height:88vh;
+  min-height:90vh;
   background:url(images/image-8.avif);
   background-size:cover;
   background-position:center;
@@ -504,13 +529,13 @@ body.dark-mode .testimonial-card{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .process{
     padding:80px 0;
   }
 
-}
+} */
 
 /* ABOUT SECTION */
 
@@ -684,7 +709,7 @@ body.dark-mode .feature-icon{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .about{
     padding:80px 0;
@@ -700,7 +725,7 @@ body.dark-mode .feature-icon{
     padding:20px;
   }
 
-}
+} */
 
 
 /* BENEFITS SECTION */
@@ -784,13 +809,13 @@ body.dark-mode .benefit-content p{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .benefits{
     padding:80px 0;
   }
 
-}
+} */
 /* ACHIEVEMENT SECTION */
 
 .achievements{
@@ -883,13 +908,13 @@ body.dark-mode .achievement-card p{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .achievements{
     padding:80px 0;
   }
 
-}
+} */
 /* GALLERY SECTION */
 
 .gallery{
@@ -938,7 +963,7 @@ body.dark-mode .gallery{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .gallery{
     padding:80px 0;
@@ -948,7 +973,7 @@ body.dark-mode .gallery{
     height:260px;
   }
 
-}
+} */
 /* FAQ SECTION */
 
 .faq{
@@ -1050,7 +1075,7 @@ body.dark-mode .faq-answer p{
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   .faq{
     padding:80px 0;
@@ -1061,7 +1086,7 @@ body.dark-mode .faq-answer p{
     padding:20px;
   }
 
-}
+} */
 
 /* FOOTER */
 
@@ -1161,7 +1186,7 @@ margin-top: 20px;
 
 /* RESPONSIVE */
 
-@media(max-width:768px){
+/* @media(max-width:768px){
 
   nav{
     display:none;
@@ -1183,4 +1208,114 @@ margin-top: 20px;
     transform:none;
   }
 
+} */
+ /* ================= MOBILE DARK MODE FIX ================= */
+
+@media (max-width:1024px){
+
+  .hamburger{
+    display:flex;
+  }
+
+  nav{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    flex-direction:column;
+    display:none;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  body.dark-mode nav{
+    background:#1f2937;
+  }
+
+  body.dark-mode nav a{
+    color:#ffffff;
+    border-bottom:1px solid #374151;
+  }
+
+  body.dark-mode nav a:hover{
+    background:#374151;
+    color:#f4b400;
+  }
+
+  body.dark-mode .dropdown-content{
+    background:#111827;
+  }
+
+  body.dark-mode .dropdown-content a{
+    color:#ffffff;
+  }
+
+  body.dark-mode .dropdown-content a:hover{
+    background:#374151;
+    color:#f4b400;
+  }
+
+  body.dark-mode .hamburger{
+    color:#ffffff;
+  }
+
+}
+
+@media (max-width: 768px){
+
+  .hero-text h1{
+    font-size:34px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .section-title h2{
+    font-size:28px;
+  }
+
+  .pricing-card{
+    padding:30px 20px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .logo a{
+    font-size:18px;
+  }
+
+  .hero-text h1{
+    font-size:26px;
+  }
+
+  .hero{
+    min-height:70vh;
+  }
+
+  .service-card,
+  .testimonial-card,
+  .pricing-card{
+    padding:20px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+    padding:20px;
+  }
+
+  .header-icons{
+    gap:6px;
+  }
+
+  .icon-btn{
+    width:36px;
+    height:36px;
+  }
 }

@@ -36,19 +36,19 @@ header{
   z-index:1000;
 }
 
-.navbar{
+ .navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 0;
+  padding:16px 0;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
   font-size:28px;
   font-weight:700;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .logo img{
@@ -66,18 +66,18 @@ header{
 
 /* ================= NAVBAR ================= */
 
+ nav a{
+  color:#003262;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  height:50px;
+} 
 nav{
   display:flex;
   align-items:center;
   gap:30px;
 }
-
-nav a{
-  color:#003262;
-  font-weight:500;
-  transition:0.3s ease;
-}
-
 nav a:hover{
   color:#f4b400;
 }
@@ -140,6 +140,7 @@ nav a:hover{
 }
 
 .login:hover{
+  color: #003262;
   transform:scale(1.08);
 }
 
@@ -168,10 +169,11 @@ nav a:hover{
   color:#ffffff;
 }
 
+
 /* ================= HERO ================= */
 
 .hero{
-  min-height:88vh;
+  min-height:90vh;
   background:url(images/g2.jpg);
   background-size:cover;
   background-position:center;
@@ -594,6 +596,9 @@ body.rtl .dropdown-content{
   right:0;
 }
 
+body.dark-mode .hamburger{
+  color:#ffffff;
+}
 /* ================= ANIMATION ================= */
 
 @keyframes grow{
@@ -604,37 +609,165 @@ body.rtl .dropdown-content{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:768px){
+@media (max-width:1024px){
+
+  .navbar{
+    position:relative;
+  }
 
   nav{
+    position:absolute;
+    top:85px;
+    left:0;
+
+    width:100%;
+
+    background:#ffffff;
+
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:0;
+
     display:none;
+
+    border-radius:0 0 15px 15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+    z-index:999;
   }
 
-  .hero-content h1{
-    font-size:42px;
+  nav.active{
+    display:flex;
   }
 
-  .hero-content p{
-    font-size:16px;
+  nav a{
+    width:100%;
+    padding:16px 20px;
+    border-bottom:1px solid #eeeeee;
   }
 
-  .bars{
-    height:250px;
+  .dropdown{
+    width:100%;
   }
 
-  .table-row{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+  .drop-btn{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .dropdown-content{
+    position:static;
+    width:100%;
+
+    opacity:1;
+    visibility:visible;
+
+    transform:none;
+
+    display:none;
+
+    box-shadow:none;
+
+    border-radius:0;
+
+    background:#f8fafc;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display:block;
+  }
+
+  /* SHOW HAMBURGER ONLY IN MOBILE/TABLET */
+
+  .hamburger{
+    display:flex;
+  }
+
+  /* DARK MODE MENU */
+
+  body.dark-mode nav{
+    background:#1f2937;
+  }
+
+  body.dark-mode nav a{
+    color:#ffffff;
+    border-bottom:1px solid #374151;
+  }
+
+  body.dark-mode .dropdown-content{
+    background:#111827;
+  }
+}
+
+/* HIDE HAMBURGER IN DESKTOP */
+
+@media (min-width:1025px){
+
+  .hamburger{
+    display:none !important;
+  }
+
+  nav{
+    display:flex !important;
+  }
+}
+
+@media (max-width: 768px){
+
+  .hero-text h1{
+    font-size:34px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .section-title h2{
+    font-size:28px;
+  }
+
+  .pricing-card{
+    padding:30px 20px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .logo a{
+    font-size:18px;
+  }
+
+  .hero-text h1{
+    font-size:26px;
+  }
+
+  .hero{
+    min-height:70vh;
+  }
+
+  .service-card,
+  .testimonial-card,
+  .pricing-card{
+    padding:20px;
   }
 
   .footer-bottom{
-    padding:20px;
     flex-direction:column;
+    gap:10px;
     text-align:center;
+    padding:20px;
   }
 
-  .footer-legal{
-    flex-wrap:wrap;
-    justify-content:center;
+  .header-icons{
+    gap:6px;
+  }
+
+  .icon-btn{
+    width:36px;
+    height:36px;
   }
 }

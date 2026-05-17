@@ -480,15 +480,63 @@ body.rtl .sidebar .active{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:1100px){
+/* ================================================= */
+/* =============== iPad Pro 1024px ================= */
+/* ================================================= */
+
+@media screen and (max-width:1024px){
+
+  .sidebar{
+    width:240px;
+    padding:30px 20px;
+  }
+
+  .main-content{
+    margin-left:240px;
+    width:calc(100% - 240px);
+    padding:30px;
+  }
+
+  body.rtl .main-content{
+    margin-left:0;
+    margin-right:240px;
+  }
+
+  .hero{
+    padding:40px;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
 
   .analytics-section{
     grid-template-columns:1fr;
   }
 
+  .large-card img{
+    height:250px;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .search-box input{
+    max-width:250px;
+  }
+
 }
 
-@media(max-width:900px){
+/* ================================================= */
+/* ================= iPad Mini 768px =============== */
+/* ================================================= */
+
+@media screen and (max-width:768px){
 
   .dashboard-container{
     flex-direction:column;
@@ -498,41 +546,194 @@ body.rtl .sidebar .active{
     position:relative;
     width:100%;
     height:auto;
+    padding:20px;
+  }
+
+  .sidebar ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .sidebar ul li{
+    flex:1 1 45%;
+  }
+
+  .sidebar ul li a{
+    text-align:center;
+    padding:14px;
   }
 
   .main-content{
     margin-left:0;
     margin-right:0;
     width:100%;
+    padding:20px;
   }
 
   body.rtl .main-content{
     margin-right:0;
   }
 
-}
-
-@media(max-width:768px){
-
-  .hero{
-    padding:40px 30px;
-  }
-
-  .hero-text h1{
-    font-size:40px;
-  }
-
   .topbar{
     flex-direction:column;
     align-items:stretch;
+    gap:20px;
   }
 
-  .search-box input{
+  .search-box{
     width:100%;
   }
 
+  .search-box input{
+    max-width:100%;
+  }
+
   .topbar-right{
-    align-items:center;
+    justify-content:space-between;
+    width:100%;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:35px 25px;
+  }
+
+  .hero-text h1{
+    font-size:36px;
+  }
+
+  .hero-image img{
+    height:auto;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:32px;
+  }
+
+}
+
+/* ================================================= */
+/* ============= Samsung Galaxy S8+ 360px ========== */
+/* ================================================= */
+
+@media screen and (max-width:360px){
+
+  .sidebar{
+    padding:15px;
+  }
+
+  .logo{
+    font-size:26px;
+    text-align:center;
+  }
+
+  .sidebar ul{
+    flex-direction:column;
+  }
+
+  .sidebar ul li{
+    width:100%;
+  }
+
+  .sidebar ul li a{
+    font-size:14px;
+    padding:12px;
+  }
+
+  .main-content{
+    padding:15px;
+  }
+
+  .topbar{
+    gap:15px;
+  }
+
+  .topbar-right{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .top-buttons{
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .toggle-btn,
+  .bell{
+    width:100%;
+    justify-content:center;
+    padding:12px;
+    font-size:14px;
+  }
+
+  .profile{
+    width:55px;
+    height:55px;
+  }
+
+  .hero{
+    padding:25px 15px;
+    border-radius:20px;
+  }
+
+  .hero-text h1{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .hero-text p{
+    font-size:14px;
+  }
+
+  .hero-text button{
+    width:100%;
+    padding:14px;
+    font-size:14px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stat-card{
+    padding:20px;
+  }
+
+  .stat-card h2{
+    font-size:30px;
+  }
+
+  .analytics-card{
+    padding:20px;
+  }
+
+  .circle{
+    width:100px;
+    height:100px;
+    font-size:22px;
+  }
+
+  .project-card img{
+    height:180px;
+  }
+
+  .project-content{
+    padding:18px;
+  }
+
+  .section-title h2{
+    font-size:26px;
   }
 
 }

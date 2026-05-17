@@ -29,3 +29,19 @@ rtlToggle.addEventListener("click", () => {
   document.body.classList.toggle("rtl");
 
 });
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+
+  nav.classList.toggle("active");
+
+  // Toggle icon
+  if(nav.classList.contains("active")){
+    hamburger.innerHTML = "✖";
+  }
+  else{
+    hamburger.innerHTML = "☰";
+  }
+
+});

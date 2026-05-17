@@ -35,3 +35,19 @@ const themeToggle = document.getElementById("theme-toggle");
 
   });
   
+  const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+
+hamburger.addEventListener("click", () => {
+
+  nav.classList.toggle("active");
+
+  // Toggle icon
+  if(nav.classList.contains("active")){
+    hamburger.innerHTML = "✖";
+  }
+  else{
+    hamburger.innerHTML = "☰";
+  }
+
+});

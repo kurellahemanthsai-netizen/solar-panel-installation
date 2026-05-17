@@ -427,16 +427,125 @@ body.rtl .remember{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:768px){
+/* ================= GALAXY S8+ ================= */
 
-  .social-buttons{
-    grid-template-columns:1fr;
+@media screen and (max-width: 740px){
+
+  .login-section{
+    padding:20px 15px;
+  }
+
+  .login-box{
+    width:100%;
+    max-width:350px;
+    padding:24px 18px;
+    border-radius:16px;
+    position:relative;
+  }
+
+  .theme-wrapper{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .theme-toggle,
+  .rtl-toggle{
+    width:100%;
+    justify-content:center;
+  }
+
+  .logo{
+    font-size:24px;
+  }
+
+  .login-box h1{
+    font-size:24px;
+  }
+
+  .subtitle{
+    font-size:12px;
+  }
+
+  .input-box input{
+    padding:11px 12px;
+    font-size:13px;
   }
 
   .options{
     flex-direction:column;
     align-items:flex-start;
-    gap:12px;
+    gap:10px;
+  }
+
+  .social-buttons{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* ================= iPAD MINI ================= */
+
+@media screen and (min-width:768px) and (max-width:1024px){
+
+  .login-box{
+    max-width:500px;
+    padding:35px 30px;
+    position:relative;
+  }
+
+  .logo{
+    font-size:32px;
+  }
+
+  .login-box h1{
+    font-size:30px;
+  }
+
+  .subtitle{
+    font-size:14px;
+  }
+
+  .input-box input{
+    padding:14px;
+    font-size:14px;
+  }
+
+  .login-btn{
+    padding:14px;
+  }
+
+}
+
+/* ================= iPAD PRO ================= */
+
+@media screen and (min-width:1025px) and (max-width:1366px){
+
+  .login-box{
+    max-width:550px;
+    padding:40px 35px;
+    position:relative;
+  }
+
+  .logo{
+    font-size:36px;
+  }
+
+  .login-box h1{
+    font-size:34px;
+  }
+
+  .subtitle{
+    font-size:15px;
+  }
+
+  .input-box input{
+    padding:15px;
+    font-size:15px;
+  }
+
+  .login-btn{
+    padding:15px;
+    font-size:16px;
   }
 
 }
