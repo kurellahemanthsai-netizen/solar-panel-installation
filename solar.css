@@ -29,7 +29,7 @@ a{
 
 
 header{
-  background:#ffffff;
+  background:whitesmoke;
   box-shadow:0 2px 10px rgba(0,0,0,0.05);
   position:sticky;
   top:0;
@@ -77,12 +77,7 @@ header{
  padding-left:24px;
 }
  
-.dropdown:hover .dropdown-content{
- opacity:1;
- visibility:visible;
- transform:translateY(0);
-}
- 
+
 
 /* .navbar{
   display:flex;
@@ -750,8 +745,8 @@ body.dark-mode .active-card{
 
 
 .footer{
-  background:#003262;
-  color:#ffffff;
+  background:whitesmoke;
+  color:#003262;
   padding-top:80px;
 }
 
@@ -770,50 +765,59 @@ margin-top: 20px;
  
 .social-icons a{
   
-  color:var(--white);
- 
+  color:#003262;
+ text-decoration: none;
   transition:0.4s ease;
  
 }
  
-.social-icons a:hover{
-  background:var(--secondary);
+.social-icons svg:hover{
+color: #f4b400;
   transform:translateY(-5px);
 }
  
 .footer-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
   font-size:30px;
   font-weight:700;
-  margin-bottom:10px;  
+  margin-bottom:20px;
+  
+}
+.footer-logo a{
+  text-decoration: none;
+  color: #003262;
 }
 
 .footer-logo img{
-  width: 50px;
-  height: 50px;
+  width:50px;
+  height:50px;
 }
 
 .footer-logo span{
   color:#f4b400;
 }
 
+
 .footer-box p{
-  color:#cbd5e1;
+  color:black;
   margin-bottom:12px;
 }
 
-.footer-box h3{
+.footer-box1 h3{
   margin-bottom:20px;
   font-size:22px;
 }
 
-.footer-box a{
+.footer-box1 a{
   display:block;
-  color:#cbd5e1;
+  color:black;
   margin-bottom:12px;
   transition:0.3s;
 }
 
-.footer-box a:hover{
+.footer-box1 a:hover{
   color:#f4b400;
 }
 
@@ -831,7 +835,7 @@ margin-top: 20px;
  
 }
 .footer-legal a{
-  color: white;
+  color: black;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -843,102 +847,321 @@ margin-top: 20px;
   border-top:1px solid #222222;
   padding-left:100px ;
   padding-right: 100px;
-  color:white;
+  color:black;
   display: flex;
   justify-content: space-between;
 }
- 
+
+body.dark-mode .footer {
+   background:#1f2937;
+   color: #f4b400;
+}
+ body.dark-mode .footer svg{
+  color: white;
+ }
+ body.dark-mode .footer svg:hover{
+  color: #f4b400;
+ }
+ body.dark-mode .footer-bottom{
+  color: white;
+ }
+body.dark-mode .footer-legal a{
+  color: white;
+}
+body.dark-mode .footer-legal a:hover{
+  color: #f4b400;
+}
+body.dark-mode .footer-box1 a{
+  color: white;
+}
+body.dark-mode .footer-box1 a:hover{
+  color: #f4b400;
+}
+body.dark-mode .footer-box p{
+  color: white;
+}
 
 
-/* 
-@media(max-width:768px){
+ /* =========================================
+   RESPONSIVE MEDIA QUERIES
+========================================= */
 
-  .footer{
-    text-align:center;
-  }
 
-} */
- @media (max-width: 1024px){
+/* =========================================
+   TABLET + MOBILE NAVBAR
+========================================= */
 
-  nav{
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    background:#ffffff;
-    flex-direction:column;
-    gap:0;
-    display:none;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
-  }
+@media screen and (max-width:1024px){
 
-  nav a{
-    padding:15px;
-    border-bottom:1px solid #eee;
-  }
-
-  .hamburger{
-    display:block;
+  body{
+    overflow-x:hidden;
   }
 
   .navbar{
     position:relative;
+    padding:14px 0;
   }
-  
+
+  /* HAMBURGER */
+
   .hamburger{
     display:flex;
   }
+   .dropdown:hover .dropdown-content{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+  }
 
-  /* when menu active */
-  nav.active{
-    display:flex;
+  /* NAVIGATION */
+
+  /* MOBILE NAV */
+
+nav{
+  position:absolute;
+  top:100%;
+  left:0;
+
+  width:100%;
+
+  background:#ffffff;
+
+  flex-direction:column;
+  align-items:flex-start;
+
+  gap:0;
+
+  display:none;
+
+  z-index:999;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
+  overflow:hidden;
+
+  border-radius:0 0 20px 20px;
+}
+
+nav.active{
+  display:flex;
+}
+
+nav a{
+  width:100%;
+  padding:16px 22px;
+  border-bottom:1px solid #eeeeee;
+  height:auto;
+  color:#003262;
+}
+
+/* DARK MODE MOBILE MENU */
+
+body.dark-mode nav{
+  background:#1f2937;
+}
+
+body.dark-mode nav a{
+  color:#ffffff;
+  border-bottom:1px solid #374151;
+}
+
+body.dark-mode nav a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+/* DARK MODE DROPDOWN */
+
+body.dark-mode .dropdown-content{
+  background:#111827;
+}
+
+body.dark-mode .dropdown-content a{
+  background:#111827;
+  color:#ffffff;
+}
+
+body.dark-mode .dropdown-content a:hover{
+  background:#374151;
+  color:#f4b400;
+}
+
+  /* DROPDOWN */
+
+  .dropdown{
+    width:100%;
+  }
+
+  .drop-btn{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  .dropdown-content{
+    position:static;
+
+    width:100%;
+
+    opacity:1;
+    visibility:visible;
+    transform:none;
+
+    display:none;
+
+    box-shadow:none;
+
+    border-radius:0;
+  }
+
+  .dropdown.active .dropdown-content{
+    display:block;
+  }
+
+  .dropdown-content a{
+    padding-left:40px;
+    background:#f9fafb;
+  }
+
+  /* HERO */
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .hero-text h1{
+    font-size:42px;
+  }
+
+  .hero-buttons{
+    flex-wrap:wrap;
+  }
+
+  /* GRIDS */
+
+  .service-grid,
+  .testimonial-grid,
+  .pricing-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-bottom{
+    padding-left:30px;
+    padding-right:30px;
   }
 }
 
-@media (max-width: 768px){
+
+/* =========================================
+   MOBILE DEVICES
+========================================= */
+
+@media screen and (max-width:768px){
+
+  .container{
+    width:92%;
+  }
+
+  .hero{
+    min-height:75vh;
+    text-align:center;
+  }
+
+  .hero-content{
+    grid-template-columns:1fr;
+  }
 
   .hero-text h1{
     font-size:34px;
+    line-height:1.3;
+  }
+
+  .hero-text p{
+    font-size:15px;
   }
 
   .hero-buttons{
     flex-direction:column;
+    align-items:center;
+  }
+
+  .btn-primary,
+  .btn-secondary{
+    width:100%;
+    text-align:center;
   }
 
   .section-title h2{
-    font-size:28px;
+    font-size:30px;
+  }
+
+  .why-container,
+  .contact-container{
+    grid-template-columns:1fr;
+  }
+
+  .service-grid,
+  .testimonial-grid,
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
   }
 
   .pricing-card{
     padding:30px 20px;
   }
-}
 
-@media (max-width: 480px){
-
-  .logo a{
-    font-size:18px;
+  .active-card{
+    transform:none;
   }
 
-  .hero-text h1{
-    font-size:26px;
-  }
-
-  .hero{
-    min-height:70vh;
-  }
-
-  .service-card,
-  .testimonial-card,
-  .pricing-card{
-    padding:20px;
+  .footer{
+    text-align:center;
   }
 
   .footer-bottom{
     flex-direction:column;
-    gap:10px;
+    gap:15px;
+
     text-align:center;
+
     padding:20px;
+  }
+
+  .footer-legal{
+    flex-wrap:wrap;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+   Samsung Galaxy S8+
+========================================= */
+
+@media screen and (max-width:480px){
+
+  .navbar{
+    padding:12px 0;
+  }
+
+  .logo{
+    gap:5px;
+  }
+
+  .logo img{
+    width:40px;
+    height:40px;
+  }
+
+  .logo a{
+    font-size:18px;
   }
 
   .header-icons{
@@ -948,6 +1171,71 @@ margin-top: 20px;
   .icon-btn{
     width:36px;
     height:36px;
+
+    font-size:12px;
+  }
+
+  .login{
+    padding:10px 16px;
+    font-size:14px;
+  }
+
+  .hamburger{
+    width:40px;
+    height:40px;
+
+    font-size:26px;
+  }
+
+  nav a{
+    font-size:15px;
+    padding:14px 18px;
+  }
+
+  .hero{
+    min-height:70vh;
+    padding:60px 0;
+  }
+
+  .hero-text h1{
+    font-size:26px;
+  }
+
+  .hero-text p{
+    font-size:14px;
+  }
+
+  .section-title h2{
+    font-size:26px;
+  }
+
+  .service-card,
+  .testimonial-card,
+  .pricing-card{
+    padding:20px;
+  }
+
+  .why-content h2,
+  .contact-text h2{
+    font-size:28px;
+  }
+
+  .price{
+    font-size:38px;
+  }
+
+  .footer-logo{
+    justify-content:center;
+    font-size:24px;
+  }
+
+  .footer-logo img{
+    width:40px;
+    height:40px;
+  }
+
+  .footer-bottom{
+    padding:20px 10px;
   }
 }
 

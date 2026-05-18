@@ -126,12 +126,13 @@ body{
   font-weight:700;
 
   margin-bottom:8px;
+  /* color: #003262; */
 
   cursor:pointer;
 }
 
 .bl{
-  color:#ffffff;
+  color:#003262;
 }
 
 .yl{
@@ -343,6 +344,9 @@ body{
 
 body.light-mode{
   background:#f1f5f9;
+}
+body.light-mode .logo{
+  color: #003262;
 }
 
 body.light-mode .login-section{

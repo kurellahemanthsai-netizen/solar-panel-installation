@@ -42,6 +42,7 @@ img{
   font-weight:600;
   box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
+
 .active{
   background-color: #f4b400;
   color: white;
@@ -75,7 +76,9 @@ img{
   color:#003262;
   transition:0.4s;
 }
-
+body.dark-mode .slidebar a{
+  color: white;
+}
 /* VISITED LINK FIX */
 .sidebar ul li a:visited{
   color:#003262;
@@ -404,13 +407,13 @@ body.dark-mode{
 }
 
 body.dark-mode .sidebar{
-  background:#111827;
-  color:#ffffff;
+  background:whitesmoke;
+  color:#000000;
   box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 body.dark-mode .logo .bl{
-  color:#ffffff;
+  color:#003262;
 }
 
 body.dark-mode .search-box input{
@@ -484,7 +487,21 @@ body.rtl .sidebar .active{
 /* =============== iPad Pro 1024px ================= */
 /* ================================================= */
 
+/* =========================================================
+   RESPONSIVE FIXED ALIGNMENT
+========================================================= */
+
+/* =========================
+   LAPTOP / TABLET
+========================= */
+
 @media screen and (max-width:1024px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* SIDEBAR */
 
   .sidebar{
     width:240px;
@@ -502,45 +519,112 @@ body.rtl .sidebar .active{
     margin-right:240px;
   }
 
+  /* TOPBAR */
+
+  .topbar{
+    gap:20px;
+    align-items:center;
+  }
+
+  .search-box{
+    flex:1;
+  }
+
+  .search-box input{
+    width:100%;
+    max-width:100%;
+  }
+
+  .topbar-right{
+    gap:12px;
+  }
+
+  .top-buttons{
+    gap:10px;
+  }
+
+  .toggle-btn,
+  .bell{
+    padding:12px 16px;
+  }
+
+  /* HERO */
+
   .hero{
     padding:40px;
+    gap:30px;
+  }
+
+  .hero-text{
+    text-align:left;
+  }
+
+  body.rtl .hero-text{
+    text-align:right;
   }
 
   .hero-text h1{
     font-size:42px;
+    line-height:1.3;
   }
+
+  .hero-image{
+    display:flex;
+    justify-content:center;
+  }
+
+  .hero-image img{
+    max-width:100%;
+    height:auto;
+  }
+
+  /* STATS */
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  /* ANALYTICS */
 
   .analytics-section{
     grid-template-columns:1fr;
   }
 
-  .large-card img{
-    height:250px;
+  .analytics-card{
+    width:100%;
   }
 
-  .stats-grid{
-    grid-template-columns:repeat(2,1fr);
+  .large-card img{
+    height:260px;
   }
+
+  /* PROJECTS */
 
   .projects-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .search-box input{
-    max-width:250px;
+  .project-card img{
+    height:220px;
   }
-
 }
 
-/* ================================================= */
-/* ================= iPad Mini 768px =============== */
-/* ================================================= */
+/* =========================
+   TABLETS / MOBILE
+========================= */
 
 @media screen and (max-width:768px){
+
+  body{
+    overflow-x:hidden;
+  }
 
   .dashboard-container{
     flex-direction:column;
   }
+
+  /* SIDEBAR */
 
   .sidebar{
     position:relative;
@@ -549,10 +633,16 @@ body.rtl .sidebar .active{
     padding:20px;
   }
 
+  .logo{
+    text-align:center;
+    margin-bottom:30px;
+  }
+
   .sidebar ul{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
+    justify-content:center;
   }
 
   .sidebar ul li{
@@ -564,10 +654,12 @@ body.rtl .sidebar .active{
     padding:14px;
   }
 
+  /* MAIN */
+
   .main-content{
+    width:100%;
     margin-left:0;
     margin-right:0;
-    width:100%;
     padding:20px;
   }
 
@@ -575,10 +667,12 @@ body.rtl .sidebar .active{
     margin-right:0;
   }
 
+  /* TOPBAR */
+
   .topbar{
     flex-direction:column;
     align-items:stretch;
-    gap:20px;
+    gap:18px;
   }
 
   .search-box{
@@ -586,13 +680,29 @@ body.rtl .sidebar .active{
   }
 
   .search-box input{
+    width:100%;
     max-width:100%;
   }
 
   .topbar-right{
-    justify-content:space-between;
     width:100%;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:15px;
   }
+
+  .top-buttons{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  .toggle-btn,
+  .bell{
+    flex:1;
+    justify-content:center;
+  }
+
+  /* HERO */
 
   .hero{
     grid-template-columns:1fr;
@@ -600,33 +710,96 @@ body.rtl .sidebar .active{
     padding:35px 25px;
   }
 
+  .hero-text{
+    text-align:center;
+  }
+
+  body.rtl .hero-text{
+    text-align:center;
+  }
+
   .hero-text h1{
     font-size:36px;
   }
 
+  .hero-text p{
+    font-size:15px;
+  }
+
+  .hero-text button{
+    width:auto;
+  }
+
+  .hero-image{
+    display:flex;
+    justify-content:center;
+  }
+
   .hero-image img{
+    width:100%;
+    max-width:450px;
     height:auto;
   }
 
+  /* STATS */
+
   .stats-grid{
     grid-template-columns:1fr 1fr;
+    gap:18px;
   }
+
+  .stat-card{
+    padding:25px;
+  }
+
+  /* ANALYTICS */
+
+  .analytics-section{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .analytics-card{
+    padding:25px;
+  }
+
+  .circle{
+    margin:25px auto;
+  }
+
+  /* PROJECTS */
 
   .projects-grid{
     grid-template-columns:1fr;
   }
 
-  .section-title h2{
-    font-size:32px;
+  .project-card{
+    max-width:100%;
   }
 
+  .project-card img{
+    height:220px;
+  }
+
+  /* TITLES */
+
+  .section-title h2{
+    font-size:32px;
+    text-align:center;
+  }
 }
 
-/* ================================================= */
-/* ============= Samsung Galaxy S8+ 360px ========== */
-/* ================================================= */
+/* =========================
+   SMALL MOBILE
+========================= */
 
-@media screen and (max-width:360px){
+@media screen and (max-width:480px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  /* SIDEBAR */
 
   .sidebar{
     padding:15px;
@@ -639,6 +812,7 @@ body.rtl .sidebar .active{
 
   .sidebar ul{
     flex-direction:column;
+    gap:10px;
   }
 
   .sidebar ul li{
@@ -646,13 +820,19 @@ body.rtl .sidebar .active{
   }
 
   .sidebar ul li a{
-    font-size:14px;
+    width:100%;
+    text-align:center;
     padding:12px;
+    font-size:14px;
   }
+
+  /* MAIN */
 
   .main-content{
     padding:15px;
   }
+
+  /* TOPBAR */
 
   .topbar{
     gap:15px;
@@ -660,13 +840,14 @@ body.rtl .sidebar .active{
 
   .topbar-right{
     flex-direction:column;
+    align-items:stretch;
     gap:12px;
   }
 
   .top-buttons{
     width:100%;
-    flex-wrap:wrap;
-    justify-content:center;
+    flex-direction:column;
+    gap:10px;
   }
 
   .toggle-btn,
@@ -677,19 +858,28 @@ body.rtl .sidebar .active{
     font-size:14px;
   }
 
+  .btn-text,
+  .rtl-btn{
+    font-size:13px;
+  }
+
   .profile{
     width:55px;
     height:55px;
+    margin:auto;
   }
 
+  /* HERO */
+
   .hero{
-    padding:25px 15px;
+    padding:25px 18px;
     border-radius:20px;
+    gap:20px;
   }
 
   .hero-text h1{
     font-size:28px;
-    line-height:1.3;
+    line-height:1.4;
   }
 
   .hero-text p{
@@ -702,8 +892,15 @@ body.rtl .sidebar .active{
     font-size:14px;
   }
 
+  .hero-image img{
+    border-radius:16px;
+  }
+
+  /* STATS */
+
   .stats-grid{
     grid-template-columns:1fr;
+    gap:15px;
   }
 
   .stat-card{
@@ -714,8 +911,18 @@ body.rtl .sidebar .active{
     font-size:30px;
   }
 
+  .stat-card h3{
+    font-size:18px;
+  }
+
+  /* ANALYTICS */
+
   .analytics-card{
     padding:20px;
+  }
+
+  .large-card img{
+    height:200px;
   }
 
   .circle{
@@ -724,16 +931,20 @@ body.rtl .sidebar .active{
     font-size:22px;
   }
 
+  /* PROJECTS */
+
   .project-card img{
     height:180px;
   }
 
   .project-content{
     padding:18px;
+    text-align:center;
   }
+
+  /* TITLES */
 
   .section-title h2{
     font-size:26px;
   }
-
 }
