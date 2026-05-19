@@ -76,7 +76,11 @@ header{
  background:#f3f7f3;
  padding-left:24px;
 }
- 
+ .dropdown:hover .dropdown-content{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
 
 
 /* .navbar{

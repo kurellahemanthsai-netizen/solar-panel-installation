@@ -55,6 +55,12 @@ img{
   margin-bottom:50px;
   font-size:34px;
   font-weight:800;
+  display: flex;
+  white-space: nowrap;
+}
+.logo img{
+  width: 50px;
+  height: 50px;
 }
 
 .logo .bl{ color:#003262; }
@@ -204,11 +210,25 @@ svg:hover{
   cursor:pointer;
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
   transition:0.4s;
-
+  position: relative;
   display:flex;
   align-items:center;
   gap:10px;
   white-space:nowrap;
+}
+.bell span{
+  position:absolute;
+  top:-4px;
+  right:-2px;
+  width:18px;
+  height:18px;
+  background:red;
+  border-radius:50%;
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
 }
 
 /* ================= HERO ================= */
